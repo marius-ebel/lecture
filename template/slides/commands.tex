@@ -1,0 +1,133 @@
+\newenvironment{fig}[1]
+{
+	\def\tempone{#1}
+	% \vspace{#2}
+	\begin{center}
+		}
+		{
+		Abb. \arabic{secnum}.\arabic{fignum}: \tempone
+	\end{center}
+	\stepcounter{fignum}
+}
+   
+\newcommand{\framehead}[1]{
+	\frametitle{#1}
+	\section{#1}
+}
+   
+\newcommand{\framesubhead}[1]{
+	\frametitle{#1}
+	\subsection{#1}
+}
+
+\newcommand{\headerframe}[1]{
+	\begin{frame}
+
+		\section{#1}
+		\begin{center}
+			\Huge{#1}
+		\end{center}
+	
+	\end{frame}
+}
+
+\newcommand{\headerframealias}[2]{
+	\begin{frame}
+
+		\section{#2}
+		\begin{center}
+			\Huge{#1}
+		\end{center}
+	
+	\end{frame}
+}
+
+\newcommand{\headerframelight}[1]{
+	\begin{frame}
+
+		\begin{center}
+			\Huge{#1}
+		\end{center}
+	
+	\end{frame}
+}
+
+
+
+\newcommand*{\tbd}[1]{
+	\colorbox{red}{{\color{white}\textbf{TBD}}} {\color{red}#1} \\
+}
+\newcommand*{\tbditemlabel}{
+	\colorbox{red}{{\color{white}\textbf{TBD}}} \\
+}
+\newenvironment{todolist}
+{\begin{itemize}[label=\tbditemlabel,leftmargin=36pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\boxitemlabel}{
+	\colorbox{primary}{{\color{primaryText}\textbf{\textsf{\theenumi}}}}
+}
+
+\newcommand*{\boxitem}[1]{
+	\colorbox{primary}{{\color{primaryText}\textbf{\textsf{#1}}}}
+}
+
+% \newcommand*{\chevron}{
+%   \colorbox{MaterialDeepPurple500}{{\color{white}\textbf{\textsf{\faIcon{caret-right}}}}}
+% }
+\newcommand*{\chevron}{
+	\faIcon[regular]{long-arrow-alt-right}
+}
+
+\newenvironment{hints}
+{\begin{itemize}[label=\chevron,leftmargin=18pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\checkitemlabel}{
+	\faIcon[regular]{check-square}
+}
+\newenvironment{checklist}
+{\begin{itemize}[label=\checkitemlabel,leftmargin=18pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\uncheckitemlabel}{
+	\faIcon[regular]{square}
+}
+\newenvironment{unchecklist}
+{\begin{itemize}[label=\uncheckitemlabel,leftmargin=18pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\hint}{\item}
+
+\newenvironment{steps}
+{\begin{enumerate}[label=\boxitemlabel]
+		}
+		{
+	\end{enumerate}
+}
+
+\newcommand*{\itembox}[1]{\colorbox{MaterialDeepPurple500}{{\color{white}\textbf{\textsf{#1}}}}}
+
+\newcommand*{\lineitemlabel}{
+	Zeile \colorbox{MaterialDeepPurple500}{{\color{white}\textbf{\textsf{\theenumi}}}}
+}
+
+
+\newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
+
+
+\newcommand*{\taskitemlabel}[1]{
+	\colorbox{black}{{\color{white}\faIcon{pen-square}~\textbf{\textsf{#1}}}}
+}

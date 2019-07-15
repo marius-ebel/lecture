@@ -1,0 +1,61 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{apacite}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tgbonum}
+
+\usepackage{xcolor}
+\definecolor{bb}{RGB}{0,138,217}
+% \definecolor{purple100}{RGB}{209,196,233}
+\usepackage{xcolor-material}
+% \definecolor{primary}{RGB}{0,103,150}
+\definecolor{primary}{RGB}{118,197,234} % 76C5EA
+\definecolor{primaryText}{HTML}{4D4D4D}
+% \definecolor{primary100}{RGB}{199,221,231}
+\definecolor{primary100}{RGB}{193,229,249} % C1E5F6
+\definecolor{primary300}{RGB}{159,214,240} % 9FD6F0
+
+\usepackage{cloze}
+\clozesetfont{\ttfamily\Large}
+\clozeset{
+	textcolor=bb,
+	align=center,
+}
+% \clozehide
+
+
+\usepackage[inline,shortlabels]{enumitem}
+
+\usepackage[pro]{fontawesome5}
+
+
+\usepackage{listings}
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+		breakatwhitespace=false,
+		frame=leftline,
+		aboveskip=00pt,
+    escapeinside={(*}{*)}
+}
+\usetheme{Berlin}
+\usecolortheme{dove}
+
+\newcounter{secnum}
+\stepcounter{secnum}
+\newcounter{fignum}
+\stepcounter{fignum}
+\setlength{\parskip}{0.25em}
+
+\title{Lecture Title}
+\subtitle{Einführung}
+\author{Author}
+\date{WS 1988}
+

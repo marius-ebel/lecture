@@ -1,0 +1,139 @@
+% !TEX root = ../../skript.tex
+
+\documentclass[a4paper, oneside, titlepage, 11pt, hidelinks]{report}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	width=13cm,
+	left=3cm,
+	bottom=2cm,
+  top=2cm,
+  marginparsep=0.5cm,
+  marginparwidth=4.6cm,
+}
+
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage[labelsep=space]{caption}
+
+\usepackage{csquotes}
+\usepackage[backend=biber, refsegment=chapter, defernumbers=true, style=apa]{biblatex}
+
+\usepackage{xcolor}
+\definecolor{bb}{RGB}{0,138,217}
+% \definecolor{purple100}{RGB}{209,196,233}
+\usepackage{xcolor-material}
+% \definecolor{MaterialDeepPurple50}{RGB}{237,231,246}
+
+\usepackage{cloze}
+\clozesetfont{\ttfamily\Large}
+\clozeset{
+	textcolor=bb,
+	align=center,
+	% margin=1cm,
+}
+\clozehide
+
+\usepackage[inline,shortlabels]{enumitem}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlength{\abovecaptionskip}{3pt}
+% \linespread{1.6}
+
+\usepackage{setspace}
+
+\usepackage{titling}
+
+\usepackage{minitoc}
+\renewcommand{\mtctitle}{Inhaltsverzeichnis}
+\renewcommand{\mtifont}{\large\sffamily}
+\renewcommand{\mtcfont}{\small\sffamily}
+\renewcommand{\mtcSfont}{\small\sffamily}
+\renewcommand{\mtcSSfont}{\small\sffamily}
+\renewcommand{\mtcSSSfont}{\small\sffamily}
+
+\usepackage{fontspec}
+\usepackage[pro]{fontawesome5}
+\usepackage[many]{tcolorbox}
+% Hint box
+\newtcolorbox{hintbox}[1][]{
+	arc=0pt,
+  breakable,
+  freelance,
+  colback=primary100,
+  colbacktitle=primary300,
+	fonttitle=\bfseries,
+	fontupper=\sffamily,
+  bottomrule=8pt,
+	boxrule=0pt,
+  colframe=white,
+  overlay unbroken and first={
+  \draw[primary,line width=3pt]
+    (frame.north west) -- 
+    (frame.south west);
+  },
+}
+% Hint box
+\newtcolorbox{hintbox*}[1][]{
+	arc=0pt,
+	toptitle=5pt,
+	bottomtitle=5pt,
+  breakable,
+  freelance,
+  title=\faIcon{box-open}~#1,
+  colback=primary100,
+  colbacktitle=primary300,
+  coltitle=primaryText,
+	fonttitle=\bfseries,
+	fontupper=\sffamily,
+  bottomrule=8pt,
+	boxrule=0pt,
+  colframe=white,
+  overlay unbroken and first={
+  \draw[primary,line width=3pt]
+    (frame.north west) -- 
+    (frame.south west);
+  },
+}
+
+
+\usepackage{listings}
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+		breakatwhitespace=false,
+		frame=leftline,
+		aboveskip=00pt,
+    keywordstyle=\bf,
+    escapeinside={(*}{*)}
+}
+
+\usepackage{dirtree}
+
+\usepackage{marginnote}
+
+\usepackage{hyperref}
+
+\usepackage{pdflscape}
+
+\usepackage[os=win]{menukeys}
+\renewmenumacro{\directory}{pathswithfolder}
+
+
+\title{Lecture Title\\\vspace{0.5cm}\textit{Akronym}\\\vspace{0.5cm}{\small\textit{v1.0.0}}}
+\date{WS 1988}
+\author{Author \\ \texttt{abc@domain.tld}}
+
+
+\addbibresource{sources.bib}

@@ -1,0 +1,105 @@
+% !TEX root = ../../skript.tex
+
+% \definecolor{primary}{RGB}{0,103,150}
+\definecolor{primary}{RGB}{118,197,234} % 76C5EA
+\definecolor{primaryText}{HTML}{4D4D4D}
+% \definecolor{primary100}{RGB}{199,221,231}
+\definecolor{primary100}{RGB}{193,229,249} % C1E5F6
+\definecolor{primary300}{RGB}{159,214,240} % 9FD6F0
+
+\newcommand*{\tbd}[1]{
+	\colorbox{red}{{\color{white}\textbf{TBD}}} {\color{red}#1} \\
+}
+\newcommand*{\tbditemlabel}{
+	\colorbox{red}{{\color{white}\textbf{TBD}}} \\
+}
+\newenvironment{todolist}
+{\begin{itemize}[label=\tbditemlabel,leftmargin=36pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\boxitemlabel}{
+	\colorbox{primary}{{\color{primaryText}\textbf{\textsf{\theenumi}}}}
+}
+
+\newcommand*{\boxitem}[1]{
+	\colorbox{primary}{{\color{primaryText}\textbf{\textsf{#1}}}}
+}
+
+\newcommand*{\chevron}{
+	\faIcon[regular]{long-arrow-alt-right}
+}
+
+\newenvironment{hints}
+{\begin{itemize}[label=\chevron,leftmargin=18pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\checkitemlabel}{
+	\faIcon[regular]{check-square}
+}
+\newenvironment{checklist}
+{\begin{itemize}[label=\checkitemlabel,leftmargin=18pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\uncheckitemlabel}{
+	\faIcon[regular]{square}
+}
+\newenvironment{unchecklist}
+{\begin{itemize}[label=\uncheckitemlabel,leftmargin=18pt]
+		}
+		{
+	\end{itemize}
+}
+
+\newcommand*{\hint}{\item}
+
+\newenvironment{steps}
+{\begin{enumerate}[label=\boxitemlabel]
+		}
+		{
+	\end{enumerate}
+}
+
+\newcommand*{\itembox}[1]{\colorbox{primary}{{\color{white}\textbf{\textsf{#1}}}}}
+
+\newcommand*{\lineitemlabel}{
+	Zeile \colorbox{primary}{{\color{white}\textbf{\textsf{\theenumi}}}}
+}
+
+\newenvironment{lines}
+{
+	\begin{enumerate}[label=\lineitemlabel,leftmargin=53pt]
+		}
+		{
+	\end{enumerate}
+}
+
+
+\newcommand*{\eclipse}{\texttt{eclipse}}
+
+
+
+
+
+\newcommand*{\taskitemlabel}{
+	\colorbox{black}{{\color{white}\faIcon{pen-square}~\textbf{\textsf{\theenumi}}}}
+}
+
+\newcounter{taski}
+\newenvironment{tasks}
+{
+	\begin{enumerate}[label=\taskitemlabel,leftmargin=35pt,partopsep=0pt,topsep=0pt,parsep=0pt]
+		\setcounter{enumi}{\value{taski}}
+		}
+		{
+			\setcounter{taski}{\value{enumi}}
+	\end{enumerate}
+}

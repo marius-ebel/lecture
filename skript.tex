@@ -1,0 +1,29 @@
+\newcommand*{\TemplatePath}{template/skript}
+\newcommand*{\SourcesPath}{sources}
+\newcommand*{\ImagePath}{images}
+\input{\TemplatePath/head}
+\input{\TemplatePath/commands}
+
+\begin{document}
+\maketitle
+
+\begin{singlespace}
+	\dominitoc
+	\tableofcontents
+\end{singlespace}
+
+\setstretch{1.3}
+\renewcommand{\arraystretch}{1.3}
+
+% **********************
+\include{chapters/intro/intro_00}
+\printbibliography[segment=\therefsegment,heading=subbibliography]
+
+% **********************
+\maketitle
+\include{chapters/sample/sample_00}
+\printbibliography[segment=\therefsegment,heading=subbibliography]
+
+\input{\TemplatePath/end}
+
+\end{document}

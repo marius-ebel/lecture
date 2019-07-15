@@ -1,0 +1,94 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "latex-workshop.chktex.enabled": true,
+    "editor.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "lualatex*1",
+        "tools": ["lualatex"]
+      },
+      {
+        "name": "biber*1",
+        "tools": ["biber"]
+      },
+      {
+        "name": "lualatex -> bibtex -> lualatex*2",
+        "tools": ["lualatex", "bibtex", "lualatex", "lualatex"]
+      },
+      {
+        "name": "lualatex -> biber -> lualatex*2",
+        "tools": ["lualatex", "biber", "lualatex", "lualatex"]
+      },
+      {
+        "name": "pdflatex -> bibtex -> pdflatex*2",
+        "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+      },
+      {
+        "name": "latexmk",
+        "tools": ["latexmk"]
+      },
+    ],
+    "latex-workshop.latex.tools": [
+      {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "%DOC%"]
+      },
+      {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+      },
+      {
+        "name": "lualatex",
+        "command": "lualatex",
+        "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+      },
+      {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": ["%DOCFILE%"]
+      },
+      {
+        "name": "biber",
+        "command": "biber",
+        "args": ["%DOC%"]
+      }
+    ],
+    "files.exclude": {
+      "**/*.aux": true,
+      "**/*.bbl": true,
+      "**/*.bcf": true,
+      "**/*.blg": true,
+      "**/*.log": true,
+      "**/*.maf": true,
+      "**/*.mtc": true,
+      "**/*.mtc[0-9]*": true,
+      "**/*.nav": true,
+      "**/*.out": true,
+      "**/*.run.xml": true,
+      "**/*.snm": true,
+      "**/*.synctex.gz": true,
+      "**/*.synctex*": true,
+      "**/*.toc": true,
+      "**/*.vrb": true
+    },
+    "editor.wordWrap": "on",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#76c5ea",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#dd22a1",
+      "activityBarBadge.foreground": "#e7e7e7"
+    },
+    "peacock.affectTitleBar": false,
+    "peacock.affectStatusBar": false,
+  }
+}

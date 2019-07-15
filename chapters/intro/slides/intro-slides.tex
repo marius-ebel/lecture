@@ -1,0 +1,114 @@
+\newcommand*{\TemplatePath}{../../../template/slides}
+\newcommand*{\SourcesPath}{../../../sources}
+\newcommand*{\ImagePath}{../../../images}
+\input{\TemplatePath/commands.tex}
+\input{\TemplatePath/head.tex}
+\subtitle{Kapitel 1: Einführung}
+   
+\begin{document}
+
+\frame{\titlepage}
+
+\headerframe{Organisatorisches}
+
+\begin{frame}
+	\frametitle{Folien \& Materialien}
+
+	\begin{center}
+		\url{https://abc.domain.tld/}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Inhaltliche Ausrichtung}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.0\textwidth]{\ImagePath/system_map}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inhaltliche Ausrichtung}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\textwidth]{\ImagePath/system_map}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{hints}
+				\item X
+				\item Y
+			\end{hints}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\headerframe{Neue Sektion}
+
+\begin{frame}
+	\frametitle{Neue Sektion}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\textwidth]{\ImagePath/system_map}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{steps}
+				\item X
+				\item Y
+			\end{steps}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\headerframelight{Neue Sektion ohne }
+
+\begin{frame}
+	\frametitle{Neue Sektion ohne Section}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\textwidth]{\ImagePath/sample/http_message}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{steps}
+				\item A
+				\item B
+			\end{steps}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\headerframealias{Neue Sektion}{mit Alias}
+
+\begin{frame}
+	\frametitle{Neue Sektion mit Alias}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\textwidth]{\ImagePath/sample/http_message}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{steps}
+				\item M
+				\item N
+			\end{steps}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\input{\TemplatePath/end.tex}
+
+\end{document}
